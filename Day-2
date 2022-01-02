@@ -1,0 +1,16 @@
+Final Value of Variable After Performing Operations
+
+https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
+
+class Solution {
+    public int finalValueAfterOperations(String[] str) {
+        int X=0;
+        for(String s:str)
+        {
+            if(s.charAt(1)=='+') X++;
+            else --X;
+        }
+        return X;
+   }
+
+}
