@@ -1,0 +1,23 @@
+https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
+
+
+ public static List<Integer> rotLeft(List<Integer> a, int d) {
+        
+        int low=0,high=a.size();
+        rotate(a,low,d-1);
+        rotate(a,d,high-1);
+        rotate(a,low,high-1);
+    
+        return a;
+
+    }
+    
+   static void rotate(List<Integer> list , int low, int high)
+    {
+        while(low<=high)
+        {
+            Collections.swap(list,low,high);
+            low++;
+            high--;
+        }
+    }
